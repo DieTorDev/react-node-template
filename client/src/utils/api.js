@@ -19,6 +19,7 @@ export const postData = async (url, body) => {
 export const patchData = async url => {
 	const data = await fetchData(url, {
 		method: METHODS.PATCH,
+		body: JSON.stringify(body),
 		headers: HEADERS
 	});
 	return data;
